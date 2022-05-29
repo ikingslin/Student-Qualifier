@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import com.example.student.ItemListener;
 import com.example.student.R;
 import com.example.student.Adapters.RecyclerSylAdapter;
-import com.example.student.Display;
+import com.example.student.SyllabusDisplay;
 import com.example.student.Models.SingleTextmodel;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -63,6 +63,28 @@ public class SyllabusSubFragment extends Fragment {
             e.printStackTrace();
         }
         notify = root.findViewById(R.id.recsyl);
+
+
+
+
+
+        /*s1= root.findViewById(R.id.card1);
+        s1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new SyllabusDisplay(R.id.card1);
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.add(fragment,null);
+                fragmentTransaction.replace(R.id.nav_host_fragment, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });*/
+
+
+
+
         return root;
     }
 
@@ -96,10 +118,10 @@ public class SyllabusSubFragment extends Fragment {
                             public void onItemClick(int pos) {
                                 Fragment fragment = null;
                                 if(convey.equals("Syllabus")) {
-                                    fragment = new Display(sempath,sylAdapter.getItemName(),"Syllabus");
+                                    fragment = new SyllabusDisplay(sempath,sylAdapter.getItemName(),"Syllabus");
                                 }
                                 else if(convey.equals("Question")){
-                                    fragment = new Display(sempath,sylAdapter.getItemName(),"Question");
+                                    fragment = new SyllabusDisplay(sempath,sylAdapter.getItemName(),"Question");
                                 }
 
                                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
@@ -116,6 +138,9 @@ public class SyllabusSubFragment extends Fragment {
                         e.printStackTrace();
                     }
                 }
+
+
+                //send(new ExpModel(list, inner));
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -123,5 +148,21 @@ public class SyllabusSubFragment extends Fragment {
                 Log.d("Karen", "Failed");
             }
         });
+
+        /*try {
+            for (int i = 0; i < list.length; i++) {
+                try {
+                    expandableListDetail.put(list[i], inner[i]);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }*/
+
+    }
+    public void gosyl(View v){
+
     }
 }

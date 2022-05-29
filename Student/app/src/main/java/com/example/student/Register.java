@@ -159,9 +159,11 @@ public class Register extends AppCompatActivity {
         try {
 
             CropImage.activity().setAspectRatio(1,1).setFixAspectRatio(true).setGuidelines(CropImageView.Guidelines.ON).start(this);
+// start cropping activity for pre-acquired image saved on the device
             CropImage.activity(dpuri).start(this);
         }
         catch(Exception anfe){
+            //display an error message
             String errorMessage = "Whoops - your device doesn't support the crop action!";
             Toast toast = Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT);
             toast.show();
@@ -195,15 +197,19 @@ public class Register extends AppCompatActivity {
     private void uploadImage()
     {
         if (dpuri != null) {
+
+            // Code for showing progressDialog while uploading
             ProgressDialog progressDialog
                     = new ProgressDialog(this);
             progressDialog.setTitle("Uploading DP...");
             progressDialog.show();
 
+            // Defining the child of storageReference
             StorageReference ref
                     = dispic.child("DP/" + studid.getText().toString());
 
-
+            // adding listeners on upload
+            // or failure of image
             ref.putFile(dpuri)
                     .addOnSuccessListener(
                             new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -212,6 +218,9 @@ public class Register extends AppCompatActivity {
                                 public void onSuccess(
                                         UploadTask.TaskSnapshot taskSnapshot)
                                 {
+
+                                    // Image uploaded successfully
+                                    // Dismiss dialog
                                     progressDialog.dismiss();
                                     Toast
                                             .makeText(Register.this,
@@ -226,6 +235,7 @@ public class Register extends AppCompatActivity {
                         public void onFailure(@NonNull Exception e)
                         {
 
+                            // Error, Image not uploaded
                             progressDialog.dismiss();
                             Toast
                                     .makeText(Register.this,

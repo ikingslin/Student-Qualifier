@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import com.example.student.ItemListener;
 import com.example.student.R;
 import com.example.student.Adapters.RecyclerSylAdapter;
-import com.example.student.Display;
+import com.example.student.SyllabusDisplay;
 import com.example.student.Models.SingleTextmodel;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -81,7 +81,7 @@ public class FacultyFragment extends Fragment {
                         sylAdapter.setOnItemClickListener(new ItemListener() {
                             @Override
                             public void onItemClick(int pos) {
-                                Fragment fragment = new Display("Faculty",sylAdapter.getItemName());
+                                Fragment fragment = new SyllabusDisplay("Faculty",sylAdapter.getItemName());
                                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                                 fragmentTransaction.add(fragment,null);

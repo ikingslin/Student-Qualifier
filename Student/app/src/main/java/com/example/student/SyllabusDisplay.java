@@ -30,10 +30,10 @@ import android.widget.Toast;
 import javax.net.ssl.HttpsURLConnection;
 
 
-public class Display extends Fragment {
+public class SyllabusDisplay extends Fragment {
 
     public int id;
-    public Display(int id) {
+    public SyllabusDisplay(int id) {
         this.id=id;
     }
     WebView syl;
@@ -47,12 +47,12 @@ public class Display extends Fragment {
     PDFView pdfView;
     View root;
 
-    public Display(String sem, String sub, String con){
+    public SyllabusDisplay(String sem, String sub,String con){
         sempath=sem;
         subpath=sub;
         convey = con;
     }
-    public Display(String sem, String sub){
+    public SyllabusDisplay(String sem, String sub){
         sempath=sem;
         subpath=sub;
     }

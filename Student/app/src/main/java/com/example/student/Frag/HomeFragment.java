@@ -120,6 +120,11 @@ public class HomeFragment extends Fragment {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        /*RecyclerAdapter notiAdapter = new RecyclerAdapter(root.getContext(), send);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(root.getContext(), LinearLayoutManager.VERTICAL, false);
+
+        notify.setLayoutManager(new LinearLayoutManager(root.getContext()));
+        notify.setAdapter(notiAdapter);*/
     }
 
     public ArrayList<TwoTextModel> getnot() throws IOException {

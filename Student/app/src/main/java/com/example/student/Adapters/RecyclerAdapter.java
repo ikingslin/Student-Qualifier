@@ -19,6 +19,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Viewho
     private Context context;
     private ArrayList<TwoTextModel> twoTextModelArrayList;
     private String convey;
+    // Constructor
     public RecyclerAdapter(Context context, ArrayList<TwoTextModel> twoTextModelArray,String convey) {
         this.context = context;
         this.twoTextModelArrayList = twoTextModelArray;
@@ -28,6 +29,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Viewho
     @NonNull
     @Override
     public RecyclerAdapter.Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        // to inflate the layout for each item of recycler view.
         if(convey.equals("Exam")) {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.exam_card, parent, false);
             return new Viewholder(view);
@@ -41,13 +43,18 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Viewho
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerAdapter.Viewholder holder, int position) {
+        // to set data to textview and imageview of each card layout
         TwoTextModel model = twoTextModelArrayList.get(position);
         holder.title.setText(model.gettitle());
         holder.content.setText(model.getcontent());
     }
 
+
+
     @Override
     public int getItemCount() {
+        // this method is used for showing number
+        // of card items in recycler view.
         return twoTextModelArrayList.size();
     }
 

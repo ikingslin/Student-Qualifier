@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:id="@+id/syllaydisp"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Display">
+    tools:context=".SyllabusDisplay">
 
     <com.github.barteksc.pdfviewer.PDFView
         android:id="@+id/pdfDisp"

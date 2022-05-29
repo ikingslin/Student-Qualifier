@@ -112,6 +112,9 @@ public class Question extends Fragment {
                         e.printStackTrace();
                     }
                 }
+
+
+                //send(new ExpModel(list, inner));
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -119,6 +122,19 @@ public class Question extends Fragment {
                 Log.d("Karen", "Failed");
             }
         });
+
+        /*try {
+            for (int i = 0; i < list.length; i++) {
+                try {
+                    expandableListDetail.put(list[i], inner[i]);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }*/
+
     }
 }
 

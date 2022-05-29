@@ -5,13 +5,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/bg_1"
     android:orientation="vertical">
+
     <androidx.recyclerview.widget.RecyclerView android:id="@+id/recexamtitle"
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clickable="false"
         android:focusable="true" />
+
+
     <androidx.recyclerview.widget.RecyclerView android:id="@+id/recexam"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clickable="false"
