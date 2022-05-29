@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_1"
+    android:layout_height="match_parent"
+    tools:context=".Frag.HomeFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timetablecard"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="#DAE8FC"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+        <TableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="*"
+            >
+            <TableRow>
+                <TextView
+                    android:id="@+id/firstp"
+                    android:padding="3dip"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_horizontal"/>
+                <TextView
+                    android:id="@+id/secondp"
+                    android:padding="3dip"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_horizontal"/>
+                <TextView
+                    android:id="@+id/thirdp"
+                    android:padding="3dip"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_horizontal"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/firstt"
+                    android:padding="3dip"
+                    android:textSize="10sp"
+                    android:text="09:00 AM to 09:50AM"
+                    android:textColor="@color/black"
+                    android:gravity="center_horizontal"/>
+                <TextView
+                    android:id="@+id/secondt"
+                    android:padding="3dip"
+                    android:textSize="10sp"
+                    android:text="09:50 AM to 10:40PM"
+                    android:textColor="@color/black"
+                    android:gravity="center_horizontal"/>
+                <TextView
+                    android:id="@+id/thirdt"
+                    android:padding="3dip"
+                    android:textSize="10sp"
+                    android:text="10:55 AM to 11:45PM"
+                    android:textColor="@color/black"
+                    android:gravity="center_horizontal"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/dayoftime"
+                    android:padding="3dip"
+                    android:layout_span="3"
+                    android:textSize="28sp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/fourthp"
+                    android:padding="3dip"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_horizontal"/>
+                <TextView
+                    android:id="@+id/fifthp"
+                    android:padding="3dip"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_horizontal"/>
+                <TextView
+                    android:id="@+id/sixthp"
+                    android:padding="3dip"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:gravity="center_horizontal"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/foutht"
+                    android:padding="3dip"
+                    android:textSize="10sp"
+                    android:text="11:45 PM to 12:35PM"
+                    android:textColor="@color/black"
+                    android:gravity="center_horizontal"/>
+                <TextView
+                    android:id="@+id/fiftht"
+                    android:padding="3dip"
+                    android:textSize="10sp"
+                    android:text="01:35 PM to 02:25PM"
+                    android:textColor="@color/black"
+                    android:gravity="center_horizontal"/>
+                <TextView
+                    android:id="@+id/sixtht"
+                    android:padding="3dip"
+                    android:textSize="10sp"
+                    android:text="02:25 PM to 03:15PM"
+                    android:textColor="@color/black"
+                    android:gravity="center_horizontal"/>
+            </TableRow>
+
+
+        </TableLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/notification"
+        android:layout_marginStart="10dp"
+        android:text="Informations Tab"
+        android:textSize="22sp"
+        android:layout_below="@id/timetablecard"
+        android:textStyle="bold"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/notification">
+    <include
+        layout="@layout/syl_list_item"
+        android:id="@+id/rechome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/notification"/>
+    </ScrollView>
+</RelativeLayout>

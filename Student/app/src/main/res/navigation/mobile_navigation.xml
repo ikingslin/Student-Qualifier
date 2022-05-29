@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.student.Frag.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_syllabus"
+        android:name="com.example.student.Frag.SyllabusFragment"
+        android:label="@string/menu_syllabus"
+        tools:layout="@layout/fragment_listing" />
+
+    <fragment
+        android:id="@+id/nav_faculty"
+        android:name="com.example.student.Frag.FacultyFragment"
+        android:label="@string/menu_faculty"
+        tools:layout="@layout/fragment_listing"/>
+    <fragment
+        android:id="@+id/nav_exam"
+        android:name="com.example.student.Frag.Exam"
+        android:label="Schedule" />
+    <fragment
+        android:id="@+id/nav_fee"
+        android:name="com.example.student.Frag.Fee"
+        android:label="Fee Payment"
+        tools:layout="@layout/fragment_fee" />
+    <fragment
+        android:id="@+id/nav_feed"
+        android:name="com.example.student.Frag.Feed"
+        android:label="FeedBack" />
+    <fragment
+        android:id="@+id/nav_question"
+        android:name="com.example.student.Frag.Question"
+        android:label="Question"
+        tools:layout="@layout/fragment_question"/>
+    <fragment
+        android:id="@+id/nav_syldisp"
+        android:name="com.example.student.Display"
+        android:label="Syllabus" />
+</navigation>
